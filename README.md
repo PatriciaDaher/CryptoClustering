@@ -1,5 +1,5 @@
 # MODULE 19 Challenge 
-# CryptoClustering - Unsupervised Learning Challenge
+# CryptoClustering - Unsupervised Machine Learning Challenge
 ## Patricia Daher
 Using Python and unsupervised learning to predict if cryptocurrencies are affected by 24-hour or 7-day price changes.
 
@@ -14,63 +14,35 @@ CryptoClustering/
 ├── README.md                        # Project documentation  
 └── LICENSE                      # Specifies files to ignore in Git  
 
-## Project Steps
 
-### Data Preparation
-Load and explore the dataset (crypto_market_data.csv).
-Normalize the data using StandardScaler().
+### Data Preparation and Processing
+K-Means Clustering with PCA: Workflow (Past Tense)
+1. Data Preparation
+Loaded and explored the dataset (crypto_market_data.csv).
+Normalized the data using StandardScaler().
 Set coin_id as the index.
 
-2. Finding Optimal K (Elbow Method)
-Apply the elbow method on the scaled data to determine the best number of clusters (k).
-Plot the inertia values for k = 1 to 11.
+2. Optimal K (Elbow Method)
+Computed inertia for k = 1 to 11.
+Plotted the inertia values and determined the best k.
 
-3. K-Means Clustering (Original Data)
-Train a K-Means model with the optimal k.
-Predict clusters and visualize results with hvPlot.
+3. K-Means Clustering
+Fit the K-Means model and predicted clusters.
+Visualized results with hvPlot (for both original and PCA-transformed data).
 
-4. Dimensionality Reduction (PCA)
-Apply PCA to reduce features to 3 principal components.
-Calculate the total explained variance.
-Create a new DataFrame with the PCA-transformed data.
+4. PCA Analysis
+Reduced features to 3 principal components using PCA.
+Calculated the total explained variance.
 
-5. K-Means Clustering (PCA Data)
-Repeat the elbow method on the PCA data to find the new optimal k.
-Compare results with the original clustering.
-Visualize clusters using PC1 and PC2.
+5. Comparative Visualization
+Overlaid elbow curves (original vs. PCA data).
+Analyzed the impact of PCA on clustering (e.g., cluster separation, optimal k).
 
-6. Comparative Analysis
-Create composite plots to compare:
-Elbow curves (original vs. PCA data).
-Clustering results (original vs. PCA data).
-Answer: How does reducing features impact clustering?
-
-### Requirements
-1- Data Preparation
-Normalize data using StandardScaler().
-Maintain coin_id as the index.
-
-2- Optimal K (Elbow Method)
-Compute inertia for k = 1 to 11.
-Plot and determine the best k.
-
-3- K-Means Clustering
-Fit and predict clusters.
-Visualize with hvPlot (original and PCA data).
-
-4- PCA Analysis
-Reduce features to 3 principal components.
-Calculate explained variance.
-
-5- Comparative Visualization
-Overlay elbow curves and clustering results.
-Analyze the impact of PCA on clustering.
-
-6- Key Questions Answered
-What is the best k value for the original data?
-What is the total explained variance of the three principal components?
-Does PCA change the optimal k?
-How does reducing features affect clustering results?
+6. Key Questions Answered
+Identified the best k value for the original data.
+Reported the total explained variance of the three principal components.
+Evaluated whether PCA changed the optimal k.
+Assessed how reducing features affected clustering results.
 
 ### Technology Used
 Python 3.7+
